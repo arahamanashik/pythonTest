@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from excelRead.views import read
 
+app_name = "excelRead"
 
 urlpatterns = [
-    path("", include("hello.urls")),
+    path("", read,name='read'),
 ]
